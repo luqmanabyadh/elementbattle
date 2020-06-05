@@ -31,14 +31,35 @@ const game = () => {
         const computerChoice = computerOptions[computerNumber]
         // console.log(computerChoice)
 
+        // Function untuk memanggil animasi
+        spinImage()
         // Function untuk memanggil
-        compareElements(this.textContent, computerChoice)
+        setTimeout(() => {
+          compareElements(this.textContent, computerChoice)
+          // update images
+          playerElement.src = `./assets/${this.textContent}.png`
+          computerElement.src = `./assets/${computerChoice}.png`
+        }, 1000)
 
-        // update images
-        playerElement.src = `./assets/${this.textContent}.png`
-        computerElement.src = `./assets/${computerChoice}.png`
       })
     })
+  }
+
+  // animasi gerak
+  const spinImage = () => {
+    const imgComputer = document.querySelector('.computerElement')
+    const gambar = ['fire', 'water', 'earth']
+    let i = 0
+
+    const startTime = new Date().getTime()
+    setInterval(function () {
+      if (new Date().getTime() - startTime > 1000) {
+        clearInterval
+        return
+      }
+      imgComputer.setAttribute('src', `assets/${gambar[i++]}.png`)
+      if (i == gambar.length) i = 0
+    }, 100)
   }
 
   // update score
