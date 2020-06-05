@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="" rel="stylesheet">
+  <title>Element Battle 2D</title>
+</head>
+
+<body>
+  <section class="game">
+
+    <!--scoreboard-->
+    <div class="score">
+      <div class="playerScore">
+        <h2>player</h2>
+        <p>0</p>
+      </div>
+      <div class="computerScore">
+        <h2>computer</h2>
+        <p>0</p>
+      </div>
+    </div>
+
+    <!--introduction-->
+    <div class="intro ">
+      <h1>Fire Water and Earth</h1>
+      <div class="image">
+        <img src="assets/fire.png" alt="leaf-png">
+        <img src="assets/water.png" alt="leaf-png">
+        <img src="assets/earth.png" alt="leaf-png">
+      </div>
+      <button>Let's play</button>
+    </div>
+
+    <!--bagian matching-->
+    <div class="match fadeOut">
+      <h2 class="winner">Choose an element</h2>
+      <div class="elements">
+        <img class="playerElement" src="assets/fire.png" alt="">
+        <img class="computerElement" src="assets/fire.png" alt="">
+      </div>
+
+      <!--untuk player pilih element-->
+      <div class="options">
+        <button class="fire">fire</button>
+        <button class="water">water</button>
+        <button class="earth">earth</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
